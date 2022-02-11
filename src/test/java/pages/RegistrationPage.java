@@ -24,7 +24,11 @@ public class RegistrationPage<userMailInput> {
             userjectsInput = $("#subjectsInput"),
             userHobbies = $("#hobbiesWrapper"),
             loadPicture = $("#uploadPicture"),
-            useraddress =  $("#currentAddress");
+            useraddress =  $("#currentAddress"),
+            setState = $("#react-select-3-input"),
+            setCity = $("#react-select-4-input"),
+            submitClick = $("#submit"),
+            calendar =  $("#dateOfBirthInput");
 
     // actions
     public RegistrationPage openPage() {
@@ -65,13 +69,13 @@ public class RegistrationPage<userMailInput> {
     }
 
 
-    public RegistrationPage setGender (String gender) {
-        userGenderClikc.$(byText("Other")).click();
+    public RegistrationPage setGender (String userGender) {
+        userGenderClikc.$(byText(userGender)).click();
         return this;
     }
 
-    public RegistrationPage setHobbies (String name) {
-        userHobbies.$(byText("Sports")).click();
+    public RegistrationPage setHobbies (String hobbies) {
+        userHobbies.$(byText(hobbies)).click();
         return this;
     }
 
@@ -82,14 +86,28 @@ public class RegistrationPage<userMailInput> {
 
 
 
-    public  RegistrationPage setAddress (String name){
-        useraddress.setValue("Some address 1");
+    public  RegistrationPage setAddress (String address){
+        useraddress.setValue(address);
         return this;
     }
 
+    public RegistrationPage setState(String state) {
+        setState.setValue(state).pressEnter();
+        return this;
+    }
 
-    public void setBirthDate(String day, String month, String year) {
-        $("#dateOfBirthInput").click();
+    public RegistrationPage setCity(String City) {
+        setCity.setValue(City).pressEnter();
+        return this;
+    }
+
+    public RegistrationPage submitClick() {
+        submitClick.click();
+        return this;
+    }
+
+    public void setBirthDat(String day, String month, String year) {
+        calendar.click();
         calendarComponent.setDate(day, month, year);
     }
 
@@ -100,4 +118,5 @@ public class RegistrationPage<userMailInput> {
                 .parent().shouldHave(text(value));
         return this;
     }
+
 }
