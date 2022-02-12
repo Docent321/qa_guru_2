@@ -106,9 +106,10 @@ public class RegistrationPage<userMailInput> {
         return this;
     }
 
-    public void setBirthDat(String day, String month, String year) {
+    public RegistrationPage setBirthDate(String day, String month, String year) {
         calendar.click();
         calendarComponent.setDate(day, month, year);
+        return this;
     }
 
 

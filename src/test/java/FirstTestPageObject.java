@@ -45,7 +45,7 @@ public class FirstTestPageObject {
                 .setUserEmail(email)
                 .setUserNumber(userNumber)
                 .setGender(userGender)
-                .setBirthDat(day, month, year)
+                .setBirthDate(day, month, year)
                 .setSubjects(subjects)
                 .setHobbies(hobbies)
                 .loadPicture(loadPicture)
