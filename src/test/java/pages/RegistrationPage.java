@@ -44,7 +44,7 @@ public class RegistrationPage<userMailInput> {
         return this;
     }
 
-    public RegistrationPage  setLastName(String lastName) {
+    public RegistrationPage setLastName(String lastName) {
         lastNameInput.setValue(lastName);
 
         return this;

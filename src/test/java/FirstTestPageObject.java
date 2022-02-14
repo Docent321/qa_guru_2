@@ -19,7 +19,7 @@ public class FirstTestPageObject {
             lastName = "Egorov",
             email = "alex@egorov.com",
             userNumber = "1231231230",
-            day = "30",
+            day = "12",
             month = "July",
             year = "2008",
             userGender = "Other",
