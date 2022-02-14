@@ -16,12 +16,12 @@ public class FirstTestPageObject {
 
     String
             firstName = "Alex",
-            lastName = "Egorov",
-            email = "alex@egorov.com",
-            userNumber = "1231231230",
+            lastName = "Donskov",
+            email = "alex@mail.com",
+            userNumber = "1231231231",
             day = "12",
             month = "July",
-            year = "2008",
+            year = "2001",
             userGender = "Other",
             subjects = "Math",
             hobbies = "Sports",
@@ -56,10 +56,17 @@ public class FirstTestPageObject {
 
 
 
-        $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
+
         registrationPage
                 .checkForm("Student Name", firstName + " " + lastName)
                 .checkForm("Student Email", email)
-                .checkForm("Gender", userGender);
+                .checkForm("Gender", userGender)
+                .checkForm("Mobile", userNumber)
+                .checkForm("Date of Birth", day + " " + month + "," + year)
+                .checkForm("Subjects", subjects)
+                .checkForm("Hobbies", hobbies)
+                .checkForm("Picture", loadPicture)
+                .checkForm("Address", address)
+                .checkForm("State and City", state + " " + City);
     }
 }
